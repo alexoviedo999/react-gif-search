@@ -3,6 +3,7 @@ import React from 'react';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {term: ''}
   }
 
@@ -12,8 +13,8 @@ class SearchBar extends React.Component {
   }
   render() {
     return (
-      <div>
-        <input onChange={event => this.onInputChange(event.target.value)} />
+      <div className="search">
+        <input placeholder="Enter text to search for gifs!" onChange={event => this.onInputChange(event.target.value)} />
       </div>
     );
   }
